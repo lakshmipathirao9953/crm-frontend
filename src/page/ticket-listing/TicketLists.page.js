@@ -25,6 +25,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import SearchForm from "../../components/search-form/SearchForm.comp";
 import TicketTable from "../../components/ticket-table/TicketTable.comp";
 import tickets from "../../assets/data/dummy.tickets.json";
+import { Link } from "react-router-dom";
 const TicketLists = () => {
   const [str, setStr] = useState("");
   const [dispTicket, setDispTicket] = useState(tickets);
@@ -53,7 +54,9 @@ const TicketLists = () => {
       </Row>
       <Row className="mt-4">
         <Col>
-          <Button variant="info">Add new Ticket</Button>
+          <Link to="/add-ticket">
+            <Button variant="info">Add new Ticket</Button>
+          </Link>
         </Col>
         <Col className="text-right">
           <SearchForm handleOnChange={handleOnChange} str={str} />
