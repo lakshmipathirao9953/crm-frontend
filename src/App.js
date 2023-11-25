@@ -42,8 +42,9 @@ import PrivateRoute from "./components/private-route/PrivateRoute.comp.js";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    // <Router>
+    <div className="App">
+      <Router>
         <Switch>
           <Route exact path="/">
             <Entry />
@@ -62,8 +63,9 @@ function App() {
             <Ticket />
           </PrivateRoute>
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </div>
+    // </Router>
   );
 }
 
